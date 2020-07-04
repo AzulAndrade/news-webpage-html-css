@@ -1,0 +1,327 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(230, 230, 230);
+  background-size: cover;
+}
+.logo {
+  width: 150px;
+  padding-left: 50px;
+  padding-top: 10px;
+}
+nav {
+  background-color: rgb(255, 255, 255);
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+nav .list {
+  padding-right: 50px;
+  display: flex;
+  flex-flow: row wrap;
+  list-style-type: none;
+  overflow: hidden;
+  /* float: right; */
+}
+nav ul li {
+  margin: 1rem;
+}
+nav ul li a {
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding-left: 20px;
+}
+nav ul li a:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(190, 190, 190);
+  padding: 5px;
+  transform: translateY(10px);
+  transition: 0.5s;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.checkbtn {
+  font-size: 1.5rem;
+  padding: 20px;
+  cursor: pointer;
+  margin-right: 50px;
+  margin-left: 100px;
+  display: none;
+}
+
+/* El boton no se ve */
+#check {
+  display: none;
+}
+.social-media a {
+  display: block;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 30px;
+  background-color: #bec2ce;
+  box-shadow: 5px 5px 10px #8888888a;
+}
+
+/* Contenido */
+.content {
+  /* width: 90%; */
+  float: left;
+}
+
+/* Menu del costado */
+aside {
+  padding: 50px;
+  position: fixed;
+  font-size: 1rem;
+  width: 250px;
+  height: 100%;
+  text-align: left;
+  width: 30%;
+}
+aside li a {
+  font-size: 1.2rem;
+}
+aside li {
+  padding-top: 20px;
+}
+aside ul {
+  list-style-type: none;
+}
+.content-text .row,
+.type-of-news {
+  width: 70%;
+  float: right;
+  margin: 10px;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+.type-of-news {
+  color: #1126c0;
+  font-size: 1rem;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* El bloque blanco de la noticia ocupa el 70% de la pantalla */
+.content-text .row {
+  background-color: white;
+  display: flex;
+  padding: 20px;
+  border-radius: 20px;
+
+  box-shadow: 5px 5px 20px #8888888a;
+}
+
+/* Dividi a la noticia en dos columnas, la primera es la foto */
+.content-text .column1 {
+  width: 40%;
+}
+
+/* La segunda es el titulo y texto */
+.content-text .column2 {
+  width: 40%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: auto;
+  display: block;
+}
+.content-text {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+h3 {
+  font-size: 40px;
+  padding-top: 10px;
+}
+h5 {
+  font-size: 18px;
+  font-weight: 400;
+}
+p {
+  padding-top: 10px;
+}
+button {
+  border-radius: 50px;
+  width: 170px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 10px;
+  background-color: #1126c0;
+  border-color: transparent;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+button:hover {
+  background-color: #ffffff;
+  transition: 1s;
+  border: solid 1px #073d69;
+  color: #1126c0;
+}
+
+/* Paginador */
+.pagination {
+  display: flex;
+  margin: auto;
+  width: 30%;
+  padding: 50px;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+.pagination a.active {
+  background-color: #1126c0;
+  color: white;
+  border: 1px solid #1126c0;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.pagination a:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.pagination a:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.mobile {
+  display: none;
+}
+@media (max-width: 900px) {
+  /* Content */
+  aside {
+    display: none;
+  }
+  .content-text {
+    margin: auto;
+    display: block;
+  }
+  .content-text .row {
+    display: block;
+    float: none;
+    width: 100%;
+    padding: 10px;
+  }
+  .content-text .column1 {
+    width: 100%;
+    height: 150px;
+    border-radius: 20px;
+  }
+  .column1 img {
+    width: 100%;
+    padding: 0px;
+    border-radius: 20px;
+  }
+  .content-text .column2 {
+    width: 80%;
+    display: block;
+    margin: auto;
+  }
+  .social-media {
+    flex-wrap: wrap;
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+  .social-media a {
+    margin: 10px;
+    padding: 20px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+  }
+  .content-text {
+    display: grid;
+  }
+  .content-text .row,
+  .type-of-news {
+    width: 80%;
+    margin: auto;
+    display: block;
+    margin-bottom: 40px;
+  }
+  .type-of-news {
+    color: #1f335a;
+    font-size: 1rem;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  button {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  /* El boton para que se despliegue el menu si se ve */
+  .checkbtn {
+    display: block;
+  }
+  /* La lista no se ve hasta que se apriete el boton */
+  .list {
+    display: none;
+    padding-top: 50px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+    color: white;
+    padding-left: 0px;
+  }
+  nav ul li a:hover {
+    font-size: 20px;
+  }
+
+  /* Cuando se presiona el boton, la lista se vuelve visible 
+  gracias al ~ .list */
+  input:checked ~ .list {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000b0;
+    top: 80px;
+    text-align: center;
+    display: block;
+  }
+  /* La position fixed es para que cuando scrolleemos para abajo,
+  se mantenga fija la navbar y no desaparezca*/
+
+  /* Los items de la lista aparecen uno abajo del otro */
+  nav ul li {
+    display: block;
+    padding-top: 30px;
+  }
+
+  /* Pagination */
+  .pagination {
+    display: flex;
+    margin: auto;
+    width: 50%;
+    padding: 50px;
+  }
+
+  .mobile {
+    display: flex;
+  }
+  .desktop {
+    display: none;
+  }
+}
